@@ -1,0 +1,33 @@
+{
+  "monster": "Abyssal Demon",
+  "drops": [
+    { 
+        "itemId": 1113, 
+        "itemName": "Rune chainbody", 
+        "oneIn": 128, 
+        "qtyMin": 1, 
+        "qtyMax": 1 
+    },
+    { 
+        "itemId": 4151, 
+        "itemName": "Abyssal whip", 
+        "oneIn": 512, 
+        "qtyMin": 1, 
+        "qtyMax": 1 
+    },
+    { 
+        "itemId": 13265, 
+        "itemName": "Abyssal dagger", 
+        "oneIn": 32000, 
+        "qtyMin": 1, 
+        "qtyMax": 1 
+    },
+    { 
+        "itemId": 565, 
+        "itemName": "Blood rune", 
+        "oneIn": 32, 
+        "qtyMin": 7, 
+        "qtyMax": 7 
+    }
+  ]
+}
