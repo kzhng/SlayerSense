@@ -21,41 +21,6 @@
             "oneIn": 25.6, 
             "qtyMin": 15, 
             "qtyMax": 15
-        },
-        { 
-            "itemId": 995, 
-            "itemName": "Coins", 
-            "oneIn": 4.414, 
-            "qtyMin": 44, 
-            "qtyMax": 44
-        },
-        { 
-            "itemId": 995, 
-            "itemName": "Coins", 
-            "oneIn": 5.12, 
-            "qtyMin": 132, 
-            "qtyMax": 132
-        },
-        { 
-            "itemId": 995, 
-            "itemName": "Coins", 
-            "oneIn": 12.8, 
-            "qtyMin": 200, 
-            "qtyMax": 200
-        },
-        { 
-            "itemId": 995, 
-            "itemName": "Coins", 
-            "oneIn": 25.6, 
-            "qtyMin": 11, 
-            "qtyMax": 11
-        },
-        { 
-            "itemId": 995, 
-            "itemName": "Coins", 
-            "oneIn": 128, 
-            "qtyMin": 440, 
-            "qtyMax": 440
         }
     ]
 }

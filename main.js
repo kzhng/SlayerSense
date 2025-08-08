@@ -38,7 +38,7 @@ function renderDropTable(monsterData, prices) {
         </thead>
         <tbody>
             ${monsterData.drops.map(drop => {
-            const price = prices[drop.itemId] ? prices[drop.itemId].high : 0;
+            const price = prices[drop.itemId] ? prices[drop.itemId]?.high : 0;
             return `<tr>
                 <td>${drop.itemName}</td>
                 <td>${drop.oneIn ?? 'N/A'}</td>
@@ -55,20 +55,61 @@ function renderDropTable(monsterData, prices) {
   app.appendChild(summary);
 }
 
+function renderMonsterSelector() {
+    const monsters = ['abyssal_demon','blue_dragon', 'gargoyle'];
+    const monsterSelector = document.getElementById('monsterSelector');
+    monsterSelector.innerHTML = ''; // Clear previous options
+    monsters.forEach(monster => {
+        const newMonster = document.createElement('option');
+        newMonster.value = monster;
+        newMonster.textContent = formatMonsterName(monster);
+        monsterSelector.appendChild(newMonster);
+    })
+}
+
+function formatMonsterName(monsterName) {
+    const sentence = monsterName.replaceAll('_', ' '); // Replace all '_' with ' '
+    return sentence
+        .split(' ') // Split the sentence into an array of words
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize the first letter of each word
+        .join(' '); // Join the words back into a sentence
+    }
+
+function monsterSelectorListener(prices) {
+    const monsterSelector = document.getElementById('monsterSelector');
+    
+    monsterSelector.addEventListener('change', async function() {
+        const selectedMonster = monsterSelector.value;
+        await fetchMonsterData(selectedMonster, prices);
+    })
+}
+
+async function fetchMonsterData(monsterName, prices) {
+    try {
+    const res = await fetch('data/' + monsterName + '.json');
+    if (!res.ok) throw new Error('Failed to fetch monster data');
+
+    const monsterData = await res.json();
+    renderDropTable(monsterData, prices);
+    return monsterData;
+
+    } catch (error) {
+        console.error('Error loading monster data:', error);
+        return null;
+    }
+}
+
 (async () => {
     const prices = await fetchGePrices();
     if (!prices) {
         document.getElementById('app').textContent = 'Failed to load GE prices.';
         return;
-  }
+    }
 
-    const res = await fetch('data/abyssal_demon.json');
-    if (!res.ok) {
-        document.getElementById('app').textContent = 'Failed to load monster data.';
-        return;
-  }
+    renderMonsterSelector();
+    monsterSelectorListener(prices);
 
-  const monsterData = await res.json();
+    const monsterSelector = document.getElementById('monsterSelector');
+    await fetchMonsterData(monsterSelector.value, prices);
 
-  renderDropTable(monsterData, prices);
 })();
