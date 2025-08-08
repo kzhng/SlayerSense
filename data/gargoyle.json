@@ -1,0 +1,54 @@
+{
+    "monster": "Gargoyle",
+    "drops": [
+        { 
+            "itemId": 4153,
+            "itemName": "Granite maul",
+            "oneIn": 256, 
+            "qtyMin": 1, 
+            "qtyMax": 1
+        },
+        { 
+            "itemId": 4101,
+            "itemName": "Mystic robe top (dark)",
+            "oneIn": 512, 
+            "qtyMin": 1, 
+            "qtyMax": 1
+        },
+        { 
+            "itemId": 1163,
+            "itemName": "Rune full helm",
+            "oneIn": 42.67, 
+            "qtyMin": 1, 
+            "qtyMax": 1
+        },
+        { 
+            "itemId": 1319,
+            "itemName": "Rune 2h sword",
+            "oneIn": 64, 
+            "qtyMin": 1, 
+            "qtyMax": 1
+        },
+        { 
+            "itemId": 1373,
+            "itemName": "Rune battleaxe",
+            "oneIn": 128, 
+            "qtyMin": 1, 
+            "qtyMax": 1
+        },
+        { 
+            "itemId": 1079,
+            "itemName": "Rune platelegs",
+            "oneIn": 128, 
+            "qtyMin": 1, 
+            "qtyMax": 1
+        },
+        { 
+            "itemId": 562,
+            "itemName": "Chaos rune",
+            "oneIn": 16, 
+            "qtyMin": 30, 
+            "qtyMax": 30
+        }
+    ]
+}
