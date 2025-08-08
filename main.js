@@ -85,6 +85,8 @@ function monsterSelectorListener(prices) {
 }
 
 async function fetchMonsterData(monsterName, prices) {
+    showLoadingIndicator();
+    
     try {
     const res = await fetch('data/' + monsterName + '.json');
     if (!res.ok) throw new Error('Failed to fetch monster data');
@@ -96,6 +98,22 @@ async function fetchMonsterData(monsterName, prices) {
     } catch (error) {
         console.error('Error loading monster data:', error);
         return null;
+    } finally {
+        hideLoadingIndicator();
+    }
+}
+
+function showLoadingIndicator() {
+    const loadingIndicator = document.getElementById('loading-indicator')
+    if (loadingIndicator) {
+        loadingIndicator.style.display = 'block';
+    }
+}
+
+function hideLoadingIndicator() {
+    const loadingIndicator = document.getElementById('loading-indicator');
+    if (loadingIndicator) {
+        loadingIndicator.style.display = 'none';
     }
 }
 
