@@ -7,4 +7,4 @@ An OSRS tool that calculates expected profit per hour for Slayer tasks by combin
 - Public OSRS APIs (GE Prices, OSRS Wiki)
 
 ## Status
-Sprint 0 - setup and initial structure
+Sprint 2 - Core features development (In Progress)
