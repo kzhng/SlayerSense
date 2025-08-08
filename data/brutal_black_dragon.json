@@ -1,0 +1,68 @@
+{
+    "monster": "Brutal black dragon",
+    "drops": [
+         { 
+            "itemId": 4087,
+            "itemName": "Dragon platelegs",
+            "oneIn": 512, 
+            "qtyMin": 1, 
+            "qtyMax": 1
+        },
+        { 
+            "itemId": 4585,
+            "itemName": "Dragon plateskirt",
+            "oneIn": 512, 
+            "qtyMin": 1, 
+            "qtyMax": 1
+        },
+        { 
+            "itemId": 1249,
+            "itemName": "Dragon spear",
+            "oneIn": 512, 
+            "qtyMin": 1, 
+            "qtyMax": 1
+        },
+        { 
+            "itemId": 1631,
+            "itemName": "Uncut dragonstone",
+            "oneIn": 512, 
+            "qtyMin": 1, 
+            "qtyMax": 1
+        },
+        { 
+            "itemId": 1127,
+            "itemName": "Rune platebody",
+            "oneIn": 128, 
+            "qtyMin": 1, 
+            "qtyMax": 1
+        },
+        { 
+            "itemId": 1149,
+            "itemName": "Dragon med helm",
+            "oneIn": 128, 
+            "qtyMin": 1, 
+            "qtyMax": 1
+        },
+        { 
+            "itemId": 1305,
+            "itemName": "Dragon longsword",
+            "oneIn": 128, 
+            "qtyMin": 1, 
+            "qtyMax": 1
+        },
+        { 
+            "itemId": 1215,
+            "itemName": "Dragon dagger",
+            "oneIn": 128, 
+            "qtyMin": 1, 
+            "qtyMax": 1
+        },
+        { 
+            "itemId": 892,
+            "itemName": "Rune arrow",
+            "oneIn": 18.29, 
+            "qtyMin": 75, 
+            "qtyMax": 75
+        }
+    ]
+}

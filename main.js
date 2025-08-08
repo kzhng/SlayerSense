@@ -56,7 +56,7 @@ function renderDropTable(monsterData, prices) {
 }
 
 function renderMonsterSelector() {
-    const monsters = ['abyssal_demon','blue_dragon', 'gargoyle'];
+    const monsters = ['abyssal_demon','blue_dragon', 'brutal_black_dragon', 'gargoyle'];
     const monsterSelector = document.getElementById('monsterSelector');
     monsterSelector.innerHTML = ''; // Clear previous options
     monsters.forEach(monster => {
